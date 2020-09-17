@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7f9fc;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .box a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 34px;
+            height: 34px;
+            border: 1px solid #d5dbf2;
+            margin-left: 18px;
+            text-decoration: none;
+            border-radius: 100%;
+            transition: .3s;
+            position: relative;
+            text-align: center;
+        }
+
+        .box a:first-child {
+            margin-left: 0;
+        }
+
+        .box a::after {
+            content: '';
+            width: 34px;
+            height: 34px;
+            background: #fc427b;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: .3s;
+            transform: scale(.3);
+            z-index: -1;
+        }
+
+        .box a:hover::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .box a i {
+            color: #3b426b;
+            width: 18px;
+            height: auto;
+            transition: .3s;
+        }
+
+        .box a:hover {
+            border: 0;
+            transition: border .6s;
+        }
+
+        .box a:hover i {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <a href="" class="link-1 link"><i class="fab fa-github"></i></a>
+        <a href="" class="link-1 link"><i class="fab fa-facebook"></i></a>
+        <a href="" class="link-1 link"><i class="fab fa-dribbble"></i></a>
+        <a href="" class="link-1 link"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <script src="https://kit.fontawesome.com/772792aa70.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

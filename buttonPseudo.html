@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Pseudo Element Animations</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background: #00001f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+        }
+
+        .btn {
+            padding: 20px 90px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            color: #80ffd3;
+            border: 1px solid #80ffd3;
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        .btn::before,
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+            opacity: 1;
+            transition: .65s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+
+        .btn::before {
+            background: #c10daf;
+            z-index: -2;
+        }
+
+        .btn::after {
+            background: #80ffd3;
+            z-index: -3;
+        }
+
+
+        .btn:hover::before {
+            transform: translateX(100%);
+        }
+
+        .btn:hover::after {
+            transform: translateX(-100%);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="" class="btn">Button</a>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Button</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .btn__label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            width: 170px;
+            height: 80px;
+            padding: 0 20px;
+            border-radius: 40px;
+            background: #343b3d;
+            transition: .25s ease-in-out;
+        }
+
+        .btn {
+            display: none;
+        }
+
+        .btn__label::before {
+            content: '';
+            width: 48px;
+            height: 8px;
+            border-radius: 4px;
+            background: #06c96e;
+            transition: .25s ease-in-out;
+        }
+
+        .btn:checked+.btn__label::before {
+            transform: translateX(90%);
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+        }
+
+        .btn:checked+.btn__label {
+            background: #06c96e;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="toggle" id="toggle" class="btn">
+    <label for="toggle" class="btn__label"></label>
+</body>
+
+</html>

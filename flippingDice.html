@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipping Dice</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            color: #111;
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #2c2b2b;
+        }
+
+        .container {
+            width: 150px;
+            perspective: 1000px;
+
+        }
+
+        .cube {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            transform-style: preserve-3d;
+            transition: transform 2s ease;
+
+        }
+
+        .cube:hover {
+            transform: rotateX(180deg) rotateY(720deg);
+        }
+
+        .side {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .side.back {
+            transform: translateZ(-50px) rotateX(180deg);
+
+        }
+
+        .side.left {
+            transform: translateX(-50px) rotateY(-90deg);
+
+        }
+
+        .side.right {
+            transform: translateX(50px) rotateY(90deg);
+
+        }
+
+        .side.front {
+            transform: translateZ(50px);
+
+        }
+
+        .side.top {
+            transform: translateY(-50px) rotateX(90deg);
+
+        }
+
+        .side.bottom {
+            transform: translateY(50px) rotateX(90deg);
+
+        }
+
+        .side i {
+            font-size: 30px;
+        }
+
+        .side.grey {
+            background: #fff;
+            color: #777;
+
+        }
+
+        .side.youtube {
+            background: #ff0000;
+            color: #777;
+
+        }
+
+        .side.twitter {
+            background: #0084b4;
+            color: #777;
+
+        }
+
+        .side.facebook {
+            background: #3b5998;
+            color: #777;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cube">
+            <div class="side back youtube">
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div class="side left grey">
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div class="side front grey">
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div class="side right grey">
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div class="side top grey">
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div class="side bottom grey">
+                <i class="fab fa-youtube"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="cube">
+            <div class="side back twitter">
+                <i class="fab fa-twitter"></i>
+            </div>
+            <div class="side left grey">
+                <i class="fab fa-twitter"></i>
+            </div>
+            <div class="side front grey">
+                <i class="fab fa-twitter"></i>
+            </div>
+            <div class="side right grey">
+                <i class="fab fa-twitter"></i>
+            </div>
+            <div class="side top grey">
+                <i class="fab fa-twitter"></i>
+            </div>
+            <div class="side bottom grey">
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="cube">
+            <div class="side back facebook">
+                <i class="fab fa-facebook"></i>
+            </div>
+            <div class="side left grey">
+                <i class="fab fa-facebook"></i>
+            </div>
+            <div class="side front grey">
+                <i class="fab fa-facebook"></i>
+            </div>
+            <div class="side right grey">
+                <i class="fab fa-facebook"></i>
+            </div>
+            <div class="side top grey">
+                <i class="fab fa-facebook"></i>
+            </div>
+            <div class="side bottom grey">
+                <i class="fab fa-facebook"></i>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/772792aa70.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
